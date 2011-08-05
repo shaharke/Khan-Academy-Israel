@@ -14,7 +14,7 @@
 	<div class="menu_container">
 		<div class="menu">
 			<div class="header_links">
-				<a href="about">על הפרויקט</a> | <a href="news">הודעות</a> | <a href="forum">פורום</a> | <a href="contribute">תרומה לפרויקט</a> | <a href="contact">יצירת קשר</a>  
+				<a href="about">על הפרויקט</a> | <a href="news">הודעות</a> | <a href="forum">פורום</a> | <a href="contribute">השתתפות בפרויקט</a> | <a href="contact">יצירת קשר</a>  
 			</div>
 		</div>
 	</div>
