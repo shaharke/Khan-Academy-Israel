@@ -1,0 +1,59 @@
+.float {
+	float: right;	
+}
+
+.float_left {
+	float: left;
+}
+
+/* 3 Columns Layout */
+.col3-layout .col-main {
+	width: 530px;
+}
+
+/* 2 Columns Layout */
+.col2-layout {
+	width: 950px;
+	overflow: hidden;
+	margin: auto;
+	float:right;
+}
+
+.col2-layout .col-main {
+	width: 640px;
+	padding-top: 15px;
+}
+
+.col2-layout .col-left {
+	width: 150px;
+}
+
+/* Base Columns */
+.col-left {
+	float: right;
+	width: 204px;
+	padding-right: 7px; /* margin-left:-717px; */
+}
+
+.col-main {
+	float: right;
+	width: 530px;
+}
+
+.col-right {
+	float: right;
+	width: 204px;
+	padding-top: 0px;
+}
+
+.clear_both {
+	clear: both;
+	height: 1px;
+	overflow: hidden;
+}
+
+.ltr {
+	direction: ltr;
+	text-align: left;
+	float: left;
+}
