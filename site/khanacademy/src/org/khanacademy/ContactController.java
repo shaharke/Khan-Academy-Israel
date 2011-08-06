@@ -1,6 +1,7 @@
 package org.khanacademy;
 
 import java.io.UnsupportedEncodingException;
+import java.util.Locale;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -14,6 +15,8 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
@@ -27,11 +30,12 @@ public class ContactController {
 	
 	private static final Logger logger = Logger.getLogger(ContactController.class.getName());
 	
+	private MessageSource messageSource;
+	
 	@InitBinder
     protected void initBinder(WebDataBinder binder) {
         binder.setValidator(new FeedbackValidator());
     }
-
 	
 	@RequestMapping(value = "/contact", method=RequestMethod.GET)
 	public ModelAndView show() {
@@ -43,6 +47,18 @@ public class ContactController {
 		if (result.hasErrors()) {
 			return show();
 		}
+		boolean success = sendMail(feedback);
+		ModelAndView mav = show();
+		if (!success) {
+			mav.addObject("status", new OperationStatus(success, messageSource.getMessage("send.feedback.failure", null, Locale.getDefault())));
+		} else {
+			mav.addObject("status", new OperationStatus(success, messageSource.getMessage("send.feedback.success", null, Locale.getDefault())));
+		}
+		return mav;
+	}
+
+
+	private boolean sendMail(Feedback feedback) {
 		Properties props = new Properties();
         Session session = Session.getDefaultInstance(props, null);
         try {
@@ -65,10 +81,19 @@ public class ContactController {
 
         } catch (AddressException e) {
         	logger.log(Level.SEVERE, "Feedback message could not be sent: " + e.getMessage());
+        	return false;
         } catch (MessagingException e) {
         	logger.log(Level.SEVERE, "Feedback message could not be sent: " + e.getMessage());
-        } catch (UnsupportedEncodingException e) {}
-		return show();
+        	return false;
+        } catch (UnsupportedEncodingException e) { return false;}
+        return true;
 	}
+	
+	@Autowired
+	public void setMessageSource(MessageSource messageSource) {
+		this.messageSource = messageSource;
+	}
+	
+	
 	
 }

@@ -2,6 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <html>
 <head>
@@ -12,6 +13,27 @@
 	media="all" />
 <link rel="stylesheet" type="text/css" href="/files/css/layout.css"
 	media="all" />
+
+<script type="text/javascript"
+	src="https://www.google.com/jsapi?key=ABQIAAAAO3wpC0uwj5Q1sMGWhHs7LxSpY6j3JegbGxS1auK978Lba2TfJRR_ua4aguukER9HuzxBWfAJIF5Yzg"></script>
+
+
+<!-- 
+<script type="text/javascript">
+	google.load("jquery", "1.6.2");
+
+	google.setOnLoadCallback(OnLoad);
+
+	function OnLoad() {
+		var status = $('#status').val();
+		if (status) {
+			var message = $('#statusMessage').css('color', 'green');
+		} else {
+			var message = $('#statusMessage').css('color', 'red');
+		}
+	}
+</script>
+ -->
 </head>
 
 <body>
@@ -28,7 +50,8 @@
 				<div class="feedback_form" style="width: 500px">
 					<table>
 						<tr>
-							<td style="vertical-align: top">שם:<span class="mandatory_field_asterix"> * </span></td>
+							<td style="vertical-align: top">שם:<span
+								class="mandatory_field_asterix"> * </span></td>
 							<td>
 								<div>
 									<form:input path="name" />
@@ -42,7 +65,8 @@
 							</td>
 						</tr>
 						<tr>
-							<td style="vertical-align: top">נושא:<span class="mandatory_field_asterix"> * </span></td>
+							<td style="vertical-align: top">נושא:<span
+								class="mandatory_field_asterix"> * </span></td>
 							<td>
 								<div>
 									<form:input path="subject" />
@@ -61,9 +85,17 @@
 						</tr>
 						<tr>
 							<td></td>
-							<td><input type="submit" value="שלח"
-								class="submit_feedback_button" />
-							</td>
+							<td><div>
+									<input type="submit" value="שלח" class="submit_feedback_button" />
+									<c:choose>
+										<c:when test="${status.success}">
+											<label id="statusMessage" style="color:green">${status.message}</label> 
+									</c:when>
+									<c:otherwise>
+										<label id="statusMessage" style="color:red">${status.message}</label>
+									</c:otherwise>
+									</c:choose>
+								</div></td>
 						</tr>
 					</table>
 					<br> <span>שדות המסומנים ב-<span

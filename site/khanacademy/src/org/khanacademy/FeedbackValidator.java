@@ -7,8 +7,8 @@ import org.springframework.validation.Validator;
 public class FeedbackValidator implements Validator {
 	
 	@Override
-	public boolean supports(Class<?> feedbackClass) {
-		return Feedback.class.equals(feedbackClass);
+	public boolean supports(Class<?> clazz) {
+		return Feedback.class.equals(clazz) || OperationStatus.class.equals(clazz);
 	}
 
 	@Override

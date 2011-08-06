@@ -8,5 +8,7 @@
 	<classpathentry kind="lib" path="war/WEB-INF/lib/org.springframework.web.servlet-3.1.0.M1.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/org.springframework.beans-3.1.0.M1.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/validation-api-1.0.0.GA.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/mail.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/jstl-api-1.2.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
