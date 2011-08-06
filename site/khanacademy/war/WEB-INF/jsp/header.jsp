@@ -6,7 +6,7 @@
 <div class="header_container">
 	<div class="logo_container">
 		<div class="logo">
-			<a href="/about_project"><img src="/files/images/logo.png" alt="Logo"
+			<a href="/"><img src="/files/images/logo.png" alt="Logo"
 				id="logo" />
 			</a>
 		</div>
