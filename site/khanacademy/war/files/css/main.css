@@ -3,6 +3,7 @@ html {
 }
 
 body {
+	color: #313C4A;
 	font-family: arial;
 	font-size: 12px;
 	margin: 0;
@@ -34,7 +35,7 @@ a:hover {
 }
 
 a:visited {
-	color: #ed1944;
+	color: #FF7F2A;
 }
 
 a:active {
@@ -69,6 +70,10 @@ hr {
 
 ol,ul {
 	list-style-image: url('/files/images/hand_symbol_small.png');
+}
+
+h2 {
+	margin-top: 0px;
 }
 
 .header_links {
@@ -169,7 +174,7 @@ ol,ul {
 .main {
 	margin: 0 auto;
 	text-align: right;
-	width: 953px;
+	width: 1000px;
 	padding: 15px 0px 25px 0px;
 }
 
@@ -226,16 +231,12 @@ ol,ul {
 
 /* ================== Contribution page ====================== */
 .contib_content {
-	width: 600px;
-}
-
-.contib_img {
-	float: right;
-	width: 300px;
+	width: 400px;
 }
 
 .contib_img img {
-	margin-right: 40px;
+	margin-right: 10px;
+	margin-top: 5px;
 }
 
 /* Footer ================================================================================ */

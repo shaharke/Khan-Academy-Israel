@@ -1,5 +1,5 @@
 .float {
-	float: right;	
+	float: right;
 }
 
 .float_left {
@@ -16,7 +16,7 @@
 	width: 950px;
 	overflow: hidden;
 	margin: auto;
-	float:right;
+	float: right;
 }
 
 .col2-layout .col-main {
@@ -56,4 +56,21 @@
 	direction: ltr;
 	text-align: left;
 	float: left;
+}
+
+.horizon_separartor {
+	height: 20px;
+	width: 100%;
+}
+
+.vertical_separator {
+	width: 2px;
+	float: right;
+	background: #6E9E0C; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6E9E0C',
+		endColorstr='#BDD28F' ); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#6E9E0C),
+		to(#BDD28F) ); /* for webkit browsers */
+	background: -moz-linear-gradient(top, #6E9E0C, #BDD28F);
+	/* for firefox 3.6+ */
 }
