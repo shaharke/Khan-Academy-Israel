@@ -18,22 +18,18 @@
 	src="https://www.google.com/jsapi?key=ABQIAAAAO3wpC0uwj5Q1sMGWhHs7LxSpY6j3JegbGxS1auK978Lba2TfJRR_ua4aguukER9HuzxBWfAJIF5Yzg"></script>
 
 
-<!-- 
 <script type="text/javascript">
 	google.load("jquery", "1.6.2");
 
 	google.setOnLoadCallback(OnLoad);
 
 	function OnLoad() {
-		var status = $('#status').val();
-		if (status) {
-			var message = $('#statusMessage').css('color', 'green');
-		} else {
-			var message = $('#statusMessage').css('color', 'red');
-		}
+		var status = $('#statusMessage');
+		if (!status.is(":empty")) {
+			status.delay(2000).fadeOut(1000);
+		} 
 	}
 </script>
- -->
 </head>
 
 <body>
