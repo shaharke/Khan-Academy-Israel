@@ -1,0 +1,4 @@
+contact.name.required=אנא ציינ/י את שמך
+contact.subject.required=לא ניתן לשלוח הודעה ללא נושא
+contact.message.required=לא ניתן לשלוח הודעה ללא תוכן
+contact.success=ההודעה נשלחה בהצלחה!

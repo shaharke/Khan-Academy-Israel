@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<testsuite failures="0" time="0.04" errors="0" skipped="0" tests="3" name="BasicTest">
+  <testcase classname="BasicTest" name="retrieveCocktailByName" time="0.007">
+      </testcase>
+  <testcase classname="BasicTest" name="retrieveCocktailByAuthor" time="0.004">
+      </testcase>
+  <testcase classname="BasicTest" name="testYaml" time="0.029">
+      </testcase>
+</testsuite>

@@ -1,0 +1,69 @@
+#{extends 'main.html' /}
+<script type="text/javascript"
+	src="https://www.google.com/jsapi?key=ABQIAAAAO3wpC0uwj5Q1sMGWhHs7LxSpY6j3JegbGxS1auK978Lba2TfJRR_ua4aguukER9HuzxBWfAJIF5Yzg"></script>
+
+
+<h2>דעתכם חשובה לנו!</h2>
+<span>מורים, הורים, תלמידים או סתם אנשים שאיכפת להם - דעתכם חשובה
+	לנו. נשמח אם תיצרו עימנו קשר בכל נושא ועניין:</span>
+#{form @send() }
+<div class="feedback_form" style="width: 500px">
+	<table>
+		<tr>
+			<td style="vertical-align: top">שם:<span
+				class="mandatory_field_asterix"> * </span></td>
+			<td>
+				<div>
+					#{field 'name'} <input type="text" name="${field.name}"
+						value="${flash.name}" /> #{/field}
+					<br>
+					<span class="error">#{error 'name' /}</span>
+				</div></td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">כתובת מייל:</td>
+			<td>
+			#{field 'email'} 
+				<input type="text" name="${field.name}"
+				value="${flash.email}" /> 
+			#{/field}
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">נושא:<span
+				class="mandatory_field_asterix"> * </span></td>
+			<td>
+				<div>
+					#{field 'subject'} 
+					<input type="text" name="${field.name}"
+						value="${flash.subject}" /> 
+					#{/field}
+					<br>
+					<span class="error">#{error 'subject' /}</span>
+				</div></td>
+		</tr>
+		<tr>
+			<td>הודעה:<span class="mandatory_field_asterix"> * </span></td>
+			<td><div>
+					#{field 'message'}
+					<textarea name="${field.name}" class="${field.errorClass}">${flash.message}</textarea>
+					#{/field}
+					<br>
+					<span class="error">#{error 'message' /}</span>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><div>
+					<input type="submit" value="שלח" class="submit_feedback_button" />
+				</div></td>
+		</tr>
+	</table>
+	<br> <span>שדות המסומנים ב-<span
+		class="mandatory_field_asterix">*</span> הינם שדות חובה.</span>
+
+</div>
+#{/form}
+
+
