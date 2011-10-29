@@ -23,8 +23,8 @@ public class Contact extends Controller {
     	SimpleEmail mail = new SimpleEmail();
     	mail.setCharset("UTF-8");
     	mail.setFrom("user.khan.ac.il@gmail.com", "Khan Academy Israel User");
-//    	mail.addTo("hebrewkhan@gmail.com");
-    	mail.addTo("shahar@gmail.com");
+    	mail.addTo("hebrewkhan@gmail.com");
+    	mail.addCc("shahar@gmail.com");
     	mail.setSubject(subject);
     	message = message + "\n\n" + "This message was sent by " + email;
     	mail.setMsg(message);
