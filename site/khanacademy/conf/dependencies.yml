@@ -3,3 +3,4 @@
 require:
     - play
     - play -> gae 1.4
+    - play -> fbconnect 0.5

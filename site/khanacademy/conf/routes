@@ -12,6 +12,14 @@ GET     /news                                   Application.news
 # News page
 GET     /forum                                  Application.forum
 
+# Administration
+
+GET		/admin									Admin.index
+
+#Login
+GET 	/login									Application.login
+*		/authenticate							Application.authenticate
+
 # Contribute page
 GET     /contribute                             Application.contribute
 
