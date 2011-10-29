@@ -1,0 +1,28 @@
+#{extends 'main.html' /} #{if flash.error}
+<h1>${flash.error}</h1>
+#{/if}
+
+<script>
+	function login(serviceEndpoint) {
+		document.forms["login"].serviceId.value = serviceEndpoint;
+		document.forms["login"].submit();
+	}
+</script>
+
+
+<a onclick="javascript:login('google')">
+	<img alt="Login with Google"
+	src="/public/images/login_with_google.jpg"> 
+</a>
+<!-- 
+<a onclick="javascript:login('https://www.google.com/accounts/o8/id')">
+	<img alt="Login with Facebook"
+	src="/public/images/login_with_facebook.jpg"> 
+</a>
+ -->
+
+
+<form action="@{Application.authenticate()}" method="POST" id="login">
+	<input name="serviceId" type="hidden" value="" />
+</form>
+<div class="float_left"></div>
