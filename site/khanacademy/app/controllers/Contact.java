@@ -7,6 +7,7 @@ import play.data.validation.Required;
 import play.i18n.Messages;
 import play.libs.Mail;
 import play.mvc.Controller;
+import play.mvc.With;
 
 public class Contact extends Controller {
 

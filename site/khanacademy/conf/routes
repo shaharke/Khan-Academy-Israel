@@ -5,6 +5,7 @@
 # Home page
 GET     /                                      	Application.home
 GET     /about                                  Application.home
+GET     /about_ajax                             Application.about
 
 # News page
 GET     /news                                   Application.news
@@ -14,11 +15,7 @@ GET     /forum                                  Application.forum
 
 # Administration
 
-GET		/admin									Admin.index
-
-#Login
-GET 	/login									Application.login
-*		/authenticate							Application.authenticate
+GET		/admin									Admin.form
 
 # Contribute page
 GET     /contribute                             Application.contribute
@@ -33,3 +30,6 @@ GET     /public/                                staticDir:public
 
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
+
+# Import Secure routes
+*       /                                    	module:secure
