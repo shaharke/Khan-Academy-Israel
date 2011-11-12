@@ -1,0 +1,73 @@
+#{extends 'main.html' /} #{set title:'admin.html' /} #{form @addLesson() }
+<div class="feedback_form" style="width: 500px">
+	<table>
+		<tr>
+			<td style="vertical-align: middle">שם השיעור בעברית:</td>
+			<td style="vertical-align: middle">
+				<div>
+					#{field 'hebrewName'} <input type="text" name="${field.name}" value="${flash.hebrewName}" /> #{/field} <span
+						class="error">#{error 'hebrewName' /}</span> <br>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: middle">שם השיעור במקור (באנגלית):</td>
+			<td style="vertical-align: middle">
+				<div>
+					#{field 'originalName'} <input type="text" name="${field.name}" value="${flash.originalName}" /> #{/field} <span
+						class="error">#{error 'originalName' /}</span> <br>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: middle">תיאור:</td>
+			<td style="vertical-align: middle">
+				<div>
+					#{field 'description'}
+					<textarea name="${field.name}" value="${flash.description}"></textarea>
+					#{/field} <br>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: middle"">כתובת YouTube:</td>
+			<td style="vertical-align: middle">
+				<div>
+					#{field 'url'} <input type="text" name="${field.name}" value="${flash.url}" style="width: 350px"/> #{/field} <span class="error">#{error
+						'url' /}</span>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: middle">מקצוע:</td>
+			<td style="vertical-align: middle">#{field 'subject'} <select name="${field.name}"> #{list
+					items:subjects, as:'subject' }
+					<option value="${subject.id}">${subject.name}</option> #{/list}
+			</select> #{/field}</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: middle">נושא:</td>
+			<td style="vertical-align: middle">#{field 'topic'} <select name="${field.name}"> #{list items:topics,
+					as:'topic' }
+					<option value="${topic.id}">${topic.name}</option> #{/list}
+			</select> #{/field}</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: middle">מספר סידורי:</td>
+			<td style="vertical-align: middle">
+				<div>
+					#{field 'serialNumber'} <input type="number" name="${field.name}" value="${flash.serialNumber}" style="width: 40px" /> #{/field} <span
+						class="error">#{error 'serialNumber' /}</span> <br>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><div>
+					<input type="submit" value="הוסף שיעור" class="submit_feedback_button" />
+				</div></td>
+		</tr>
+	</table>
+	<br>
+</div>
+#{/form}
