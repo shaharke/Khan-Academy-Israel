@@ -24,6 +24,11 @@ GET     /contribute                             Application.contribute
 GET     /contact		                        Contact.form
 POST    /contact                                Contact.send
 
+# Catalog
+
+GET		/catalog								Catalog.show
+GET		/catalog/json							Catalog.showJson
+
 
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public

@@ -1,11 +1,17 @@
 #{extends 'main.html' /}
 <!-- Place this render call where appropriate -->
+#{script 'jquery-1.6.2.min.js' /}
 <script type="text/javascript">
   (function() {
     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
     po.src = 'https://apis.google.com/js/plusone.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
   })();
+  
+  $(document).ready(function() {
+		var showCatalog = #{jsAction @Catalog.show() /}
+	  	$('#catalog_container').load('http://localhost:9000/catalog');
+	 });
 </script>
 <div>
 	<div class="float" style="padding-left: 20px; width: 380px;">
@@ -61,4 +67,8 @@
 		</div>
 	</div>
 	<div class="clear_both"></div>
+	<div style="border-bottom: 2px solid; border-bottom-color: #E8EDD8; padding-top: 20px"></div>
+	<div id="catalog_container">
+	</div>
+	
 </div>

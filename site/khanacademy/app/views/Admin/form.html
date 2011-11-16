@@ -39,15 +39,8 @@
 			</td>
 		</tr>
 		<tr>
-			<td style="vertical-align: middle">מקצוע:</td>
-			<td style="vertical-align: middle">#{field 'subject'} <select name="${field.name}"> #{list
-					items:subjects, as:'subject' }
-					<option value="${subject.id}">${subject.name}</option> #{/list}
-			</select> #{/field}</td>
-		</tr>
-		<tr>
 			<td style="vertical-align: middle">נושא:</td>
-			<td style="vertical-align: middle">#{field 'topic'} <select name="${field.name}"> #{list items:topics,
+			<td style="vertical-align: middle">#{field 'topicId'} <select name="${field.name}"> #{list items:topics,
 					as:'topic' }
 					<option value="${topic.id}">${topic.name}</option> #{/list}
 			</select> #{/field}</td>

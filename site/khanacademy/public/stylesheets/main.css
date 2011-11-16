@@ -235,6 +235,12 @@ h2 {
 	overflow: hidden;
 }
 
+/* ================== Catalog ====================== */
+
+.lessons {
+	padding-top: 20px;
+}
+
 /* ================== Contact page ====================== */
 .feedback_form {
 	width: 400px;

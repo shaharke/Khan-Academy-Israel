@@ -4,6 +4,7 @@ import java.net.URL;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 import play.db.jpa.Model;
@@ -17,12 +18,8 @@ public class Lesson extends Model {
 	public String description;
 	public int serialNumber;
 	
-	@OneToOne
-	@JoinColumn(name = "subject_id")
-	public Subject subject;
-	
-	@OneToOne
-	@JoinColumn(name = "topic_id")
+	@ManyToOne
+	@JoinColumn(name = "topic_id", nullable = false)
 	public Topic topic;
     
 }

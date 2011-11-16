@@ -5,7 +5,6 @@ import java.net.URL;
 import java.util.List;
 
 import models.Lesson;
-import models.Subject;
 import models.Topic;
 import play.data.validation.Required;
 import play.mvc.Controller;
@@ -15,9 +14,8 @@ import play.mvc.With;
 public class Admin extends Controller {
 
 	public static void form() {
-		List<Subject> subjects = Subject.all().fetch();
 		List<Topic> topics = Topic.all().fetch();
-		render(subjects, topics);
+		render(topics);
 	}
 
 	public static void addLesson(
@@ -25,7 +23,7 @@ public class Admin extends Controller {
 			@Required(message = "addLesson.originalName.required") String originalName,
 			String description,
 			@Required(message = "addLesson.url.required") String url,
-			Long subject, Long topic,
+			Long topicId,
 			@Required(message = "addLesson.serial.required") int serialNumber)
 			throws MalformedURLException {
 		
@@ -48,8 +46,7 @@ public class Admin extends Controller {
 			params.flash();
 			form();
 		}
-		lesson.subject = Subject.findById(subject);
-		lesson.topic = Topic.findById(subject);
+		lesson.topic = Topic.findById(topicId);;
 		lesson.save();
 		form();
 	}

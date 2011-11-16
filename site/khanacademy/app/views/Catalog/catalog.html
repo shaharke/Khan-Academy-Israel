@@ -1,0 +1,21 @@
+#{script 'autocolumn.min.js' /}
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.catalog').fadeIn(2000);
+	$('.lessons').columnize({columns:3, width:300, 'float':'right', lastNeverTallest : true});
+});
+</script>
+<div class="catalog" style="display: none;">
+	#{list items:topics, as: 'topic'}
+	<div style="padding-top: 20px">
+		<h2 class="topic">${topic.name}</h2>
+		<p>${topic.description}</p>
+		<div class="lessons">
+		#{list items:topic.lessons, as:'lesson'} 
+			<div><a href="${lesson.url.toString()}" class="lesson_link">${lesson.hebrewName}</a></div>
+		#{/list}
+		</div>
+		<div style="clear: both"></div>
+	</div>
+	#{/list}
+</div>
