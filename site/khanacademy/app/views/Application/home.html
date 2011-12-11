@@ -10,11 +10,11 @@
   
   $(document).ready(function() {
 		var showCatalog = #{jsAction @Catalog.show() /}
-	  	$('#catalog_container').load('http://localhost:9000/catalog');
+	  	$('#catalog_container').load(showCatalog());
 	 });
 </script>
 <div>
-	<div class="float" style="padding-left: 20px; width: 380px;">
+	<div class="float" style="padding-left: 20px; width: 700px;">
 		<h2>קצת רקע כללי</h2>
 		<p>Khan Academy הינו ארגון אמריקאי ללא מטרות רווח אשר שם לעצמו
 			למטרה לאפשר לכל אדם - בין אם הוא תלמיד, מורה, הורה, סטודנט או מרצה -
@@ -24,17 +24,25 @@
 			פיסיקה, כלכלה והסטוריה. הסרטונים, אשר אורכם נע סביב ה-10 דקות לסרטון,
 			מועברים בצורה משעשעת וכיפית, אך יותר מהכל - </span><span
 			style="font-weight: bold;">מובנת</span><span>.</span><br> <br>
-		<span>לקבלת מידע נוסף אודות הפרויקט האמריקאי אתם מוזמנים לצפות
-			בסרטון שמשמאל או להכנס לאתר הפרויקט בכתובת </span><a
+		<p>לקבלת מידע נוסף אודות הפרויקט האמריקאי אתם מוזמנים לצפות
+			בסרטון שמשמאל או להכנס לאתר הפרויקט בכתובת </p><a
 			href="http://www.khanacademy.org/">www.khanacademy.org</a><span>.</span><br>
 		<br>
 		<h2>הפרויקט הישראלי</h2>
-		<span>מטרת הפרויקט הישראלי היא להסב חלק נכבד מהסרטונים המוצעים
+		<p>מטרת הפרויקט הישראלי היא להסב חלק נכבד מהסרטונים המוצעים
 			על ידי ה-Khan Academy לעברית, על מנת לאפשר גם למוסדות חינוך בארץ
 			ליהנות ממאגר מקוון ומקוטלג של שיעורים. נכון לעכשיו המעורבות בפרויקט
-			היא על בסיס התנדבותי, ולכן נשמח לקבל כל עזרה שהיא. לחץ </span><a
-			href="contribute">כאן</a><span> אם ברצונך ללמוד כיצד ניתן
-			לתרום לפרויקט.</span>
+			היא על בסיס התנדבותי, ולכן נשמח <a
+			href="contribute">לקבל כל עזרה שהיא</a>.</p>
+			<br>
+			<p>העבודה על הסבת הסרטונים התחילה רק לפני חודשים ספורים, ולכן רוב הסרטונים עדיין לא עברו הסבה מלאה. היות וברצוננו לעודד שימוש בסרטונים שכן הסובו, אלה שהעבודה עליהם הושלמה יועלו באופן מיידי לאתר הפרויקט על מנת שיהיו נגישים לקהל הרחב.  </p>
+			<h2></h2>
+		<span>פרויקט ההסבה מבוצע על ידי שנקר, בית ספר גבוה להנדסה ולעיצוב בחסות איגוד האינטרנט הישראלי:</span>
+		<div>
+			<img alt="שנקר" src="public/images/logo-shenkar.gif">
+			<img alt="איגוד האינטרנט הישראלי" src="public/images/logo-isoc.gif">
+			<img alt="נהרדעא" src="public/images/logo-nehardea.gif">
+		</div>
 	</div>
 	<div class="float">
 		<object width="446" height="326">
@@ -53,20 +61,14 @@
 				allowScriptAccess="always"
 				flashvars="vu=http://video.ted.com/talks/dynamic/SalmanKhan_2011-medium.flv&su=http://images.ted.com/images/ted/tedindex/embed-posters/SalmanKhan-2011.embed_thumbnail.jpg&vw=432&vh=240&ap=0&ti=1090&lang=eng&introDuration=15330&adDuration=4000&postAdDuration=830&adKeys=talk=salman_khan_let_s_use_video_to_reinvent_education;year=2011;theme=new_on_ted_com;theme=a_taste_of_ted2011;event=TED2011;"></embed>
 		</object>
+		<br>
+		<div class="fb-like-box" data-href="http://www.facebook.com/pages/%D7%90%D7%A7%D7%93%D7%9E%D7%99%D7%99%D7%AA-%D7%97%D7%90%D7%9F-%D7%91%D7%99%D7%A9%D7%A8%D7%90%D7%9C/246613442054523" data-width="445" data-show-faces="true" data-border-color="#6B9A0C" data-stream="false" data-header="true"></div>
+		<br>
 	</div>
 	<div class="float" style="padding-right:10px">
-		<div class="fb-like-box" data-href="http://www.facebook.com/pages/%D7%90%D7%A7%D7%93%D7%9E%D7%99%D7%99%D7%AA-%D7%97%D7%90%D7%9F-%D7%91%D7%99%D7%A9%D7%A8%D7%90%D7%9C/246613442054523" data-width="320" data-show-faces="true" data-border-color="#6B9A0C" data-stream="false" data-header="true"></div>
-		<br>
-		<div id="sharingServices">
-			<div style="padding-top: 10px; float: left; padding-left: 3px">
-				<!-- Google+ -->
-				<g:plusone size="medium" href="khanacademy-il.appspot.com/"></g:plusone>
-				<!-- Twitter -->
-				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://khanacademy-il.appspot.com/" data-count="horizontal">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-			</div>
-		</div>
+		
 	</div>
-	<div class="clear_both"></div>
+	<div class="clear_both"></div><br>
 	<div style="border-bottom: 2px solid; border-bottom-color: #E8EDD8; padding-top: 20px"></div>
 	<div id="catalog_container">
 	</div>

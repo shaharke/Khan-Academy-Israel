@@ -2,10 +2,9 @@ package controllers;
 
 import java.util.List;
 
-import com.google.appengine.api.users.User;
-
 import models.Topic;
-import play.mvc.*;
+import models.User;
+import play.mvc.Controller;
 
 public class Catalog extends Controller {
 
@@ -15,7 +14,7 @@ public class Catalog extends Controller {
     }
     
     public static void showJson() {
-        renderJSON(models.User.all().fetch());
+        renderJSON(User.all().fetch());
     }
 
 }

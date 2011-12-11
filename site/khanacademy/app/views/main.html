@@ -3,10 +3,10 @@
 <head>
 <title>#{get 'title' /}</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/main.css'}" media="all" />
-<link rel="stylesheet" type="text/css" href="@{'/public/stylesheets/layout.css'}" media="all" />
-<link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon">
-<link rel="icon" href="/public/images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="@{'public/stylesheets/main.css'}" media="all" />
+<link rel="stylesheet" type="text/css" href="@{'public/stylesheets/layout.css'}" media="all" />
+<link rel="shortcut icon" href="public/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="public/images/favicon.ico" type="image/x-icon">
 
 </head>
 <body>
@@ -23,32 +23,45 @@
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
-	
+
 	<div class="outer_wrapper"></div>
-		<div class="page_container">
-			<div class="header_container">
-				<div class="logo_container">
-					<div class="logo">
-						<a href="/"><img src="/public/images/logo.png" alt="Logo" id="logo" class="logo_img" /> </a>
+	<div class="page_container">
+		<div class="header_container">
+			<div class="logo_container">
+				<div class="logo">
+					<a href="/"><img src="public/images/logo.png" alt="Logo" id="logo" class="logo_img" /> </a>
+				</div>
+			</div>
+			<div class="menu_container">
+				<div class="menu">
+				<!-- 
+				<div id="sharingServices" style="float: right;">
+					<div style="padding-left: 3px">
+						<g:plusone size="medium" href="http://hebrewkhan.org/"></g:plusone>
+						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://hebrewkhan.org/"
+							data-count="horizontal">Tweet</a>
+						<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+						<div class="fb-like" data-href="http://hebrewkhan.org/" data-send="true" data-layout="button_count" data-width="50" data-show-faces="false"></div>
 					</div>
 				</div>
-				<div class="menu_container">
-					<div class="menu">
-						<div class="header_links">
-							<a href="about">על הפרויקט</a> | <a href="news">הודעות</a> | <a href="forum">פורום</a> | <a href="contribute">השתתפות
-								בפרויקט</a> | <a href="contact">יצירת קשר</a>
-						</div>
-					</div>
+				 -->
+				#{navigation style:'header_links' /}
 				</div>
-				<div class="clear_both"></div>
 			</div>
-
-			<div class="wrapper">
-				<div class="main">#{doLayout /}</div>
-			</div>
-
 			<div class="clear_both"></div>
 		</div>
-	<div class="mw_footer"></div>
+
+		<div class="wrapper">
+			<div class="main">#{doLayout /}</div>
+		</div>
+
+		<div class="clear_both"></div>
+	</div>
+	<div class="mw_footer">
+		<div class="footer_container">
+		#{navigation style:'footer_links' /}
+		</div>
+
+	</div>
 </body>
 </html>

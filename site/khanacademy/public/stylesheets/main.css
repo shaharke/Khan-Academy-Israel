@@ -11,7 +11,7 @@ body {
 	text-align: right;
 	direction: rtl;
 	height: 100%; #
-	background-image: url('/public/images/back_filler.png');
+	background-image: url('../images/back_filler.png');
 }
 
 img {
@@ -26,7 +26,8 @@ button,input[type=submit] {
 a {
 	outline: none;
 	text-decoration: none;
-	font: 12px/1.5 Arial, Helvetica, sans-serif;
+	font: 12px/1.5 Gisha;
+	font-size: 14px;
 	color: #00aeef;
 }
 
@@ -42,13 +43,13 @@ a:visited {
 a:active {
 	border: none;
 	outline: none;
-	ie-dummy: expression(this.hideFocus =               true);
+	ie-dummy: expression(this.hideFocus =                 true);
 }
 
 a:focus {
 	border: none;
 	outline: none;
-	ie-dummy: expression(this.hideFocus =               true);
+	ie-dummy: expression(this.hideFocus =                 true);
 }
 
 p {
@@ -70,7 +71,7 @@ hr {
 }
 
 ol,ul {
-	list-style-image: url('/public/images/leaf.png');
+	list-style-image: url('../images/leaf.png');
 }
 
 h2 {
@@ -78,7 +79,7 @@ h2 {
 }
 
 .outer_wrapper {
-	background-image: url('/public/images/back_filler.png');
+	background-image: url('../images/back_filler.png');
 	height: 220px;
 	width: 100%;
 	position: absolute;
@@ -105,7 +106,44 @@ h2 {
 	font-family: Gisha;
 }
 
-#6B9A0C
+.header_links span {
+	font-size: 16px;
+	font-weight: bold;
+	font-family: Gisha;
+	color: #383937;
+	font-family: Gisha;
+}
+
+.footer_container {
+	min-width: 1000px;
+	max-width: 1200px;
+	position: relative;
+	margin: 0 auto;
+	padding-top: 2px;
+}
+
+.footer_links {
+	float: right;
+}
+
+.footer_links a {
+	font-size: 10px;
+	font-weight: bold;
+	font-family: Gisha;
+	color: #FFFFFF;
+	font-family: Gisha;
+}
+
+
+.footer_links span {
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 10px;
+	font-weight: bold;
+	font-family: Gisha;
+	color: #FFFFFF;
+	font-family: Gisha;
+}
 
 .mv_standard {
 	border-bottom: #c9e1f4 1px solid;
@@ -236,7 +274,6 @@ h2 {
 }
 
 /* ================== Catalog ====================== */
-
 .lessons {
 	padding-top: 20px;
 }
@@ -277,7 +314,7 @@ h2 {
 /* Footer ================================================================================ */
 .mw_footer {
 	background-color: #A2BD33;
-	height: 20px;
+	height: 26px;
 }
 
 .footer {

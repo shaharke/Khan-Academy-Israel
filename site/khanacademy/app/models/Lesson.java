@@ -9,7 +9,7 @@ import javax.persistence.OneToOne;
 
 import play.db.jpa.Model;
 
-@Entity
+@Entity(name = "lesson")
 public class Lesson extends Model {
 	
 	public String hebrewName;
