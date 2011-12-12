@@ -9,8 +9,9 @@
   })();
   
   $(document).ready(function() {
-		var showCatalog = #{jsAction @Catalog.show() /}
-	  	$('#catalog_container').load(showCatalog());
+	  	//TODO: solve proxy issue 
+		//var showCatalog = #{jsAction @@Catalog.show() /}
+	  	$('#catalog_container').load("catalog");
 	 });
 </script>
 <div>
@@ -41,7 +42,10 @@
 		<div>
 			<img alt="שנקר" src="public/images/logo-shenkar.gif">
 			<img alt="איגוד האינטרנט הישראלי" src="public/images/logo-isoc.gif">
-			<img alt="נהרדעא" src="public/images/logo-nehardea.gif">
+			
+		</div>
+		<div style="padding-top: 10px">
+			<p>פרויקט ההסבה הוא תת-פרויקט של <a href="http://www.nehardea.org/">נהרדעא</a> - אתר תשתית שעניינו הוראה וחינוך באמצעים ממוחשבים ומשמש כמאגר תכנים במתכונת קוד ותוכן חופשיים וכפורטל לחומרי הוראה נוספים.</p>
 		</div>
 	</div>
 	<div class="float">

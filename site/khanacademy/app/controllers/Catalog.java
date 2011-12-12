@@ -13,8 +13,4 @@ public class Catalog extends Controller {
         renderTemplate("/Catalog/catalog.html", topics);
     }
     
-    public static void showJson() {
-        renderJSON(User.all().fetch());
-    }
-
 }

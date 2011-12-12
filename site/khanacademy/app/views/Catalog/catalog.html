@@ -2,7 +2,7 @@
 <script type="text/javascript">
 $(document).ready(function() {
 	$('.catalog').fadeIn(2000);
-	$('.lessons').columnize({columns:3, width:300, 'float':'right', lastNeverTallest : true});
+	$('.lessons').columnize({columns:3, width:300, 'float':'right', lastNeverTallest : false});
 });
 </script>
 <div class="catalog" style="display: none;">
@@ -11,8 +11,8 @@ $(document).ready(function() {
 		<h2 class="topic">${topic.name}</h2>
 		<p>${topic.description}</p>
 		<div class="lessons">
-		#{list items:topic.lessons, as:'lesson'} 
-			<div><a href="${lesson.url.toString()}" class="lesson_link">${lesson.hebrewName}</a></div>
+		#{list items:topic.lessons, as:'lesson'}
+			<div><a href="${lesson.url}" class="lesson_link">${lesson.hebrewName}</a></div>
 		#{/list}
 		</div>
 		<div style="clear: both"></div>
