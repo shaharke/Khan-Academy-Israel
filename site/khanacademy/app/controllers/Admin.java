@@ -6,6 +6,7 @@ import java.util.List;
 
 import models.Lesson;
 import models.Topic;
+import play.cache.Cache;
 import play.data.validation.Required;
 import play.mvc.Controller;
 import play.mvc.With;
@@ -14,7 +15,12 @@ import play.mvc.With;
 public class Admin extends Controller {
 
 	public static void form() {
-		List<Topic> topics = Topic.all().fetch();
+		List<Topic> topics = Cache.get("topics", List.class);
+		if (topics == null) {
+			topics = Topic.findAll();
+			Topic.sort(topics);
+			Cache.set("topics", topics);
+		}
 		render(topics);
 	}
 
@@ -48,6 +54,7 @@ public class Admin extends Controller {
 		}
 		lesson.topic = Topic.findById(topicId);;
 		lesson.save();
+		params.flash();
 		form();
 	}
 

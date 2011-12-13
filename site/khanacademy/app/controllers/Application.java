@@ -8,8 +8,7 @@ import play.mvc.Controller;
 public class Application extends Controller {
 	
 	public static void home() {
-		List<Topic> topics = Topic.findAll();
-		render(topics);
+		render();
 	}
 
 	public static void news() {
