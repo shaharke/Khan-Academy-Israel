@@ -1,23 +1,16 @@
 package controllers;
 
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import models.Lesson;
 import models.Topic;
-import play.cache.Cache;
 import play.mvc.Controller;
 
 public class Catalog extends Controller {
 
     public static void show() {
-    	List<Topic> topics = Cache.get("topics", List.class);
-    	if (topics == null) {
-    		topics = Topic.all().fetch();
-    		Cache.set("topics", topics, "10mn");
-    		sort(topics);
-    	}
+		List<Topic> topics = Topic.all().fetch();
+		sort(topics);
     	renderTemplate("/Catalog/catalog.html", topics);
     }
 
