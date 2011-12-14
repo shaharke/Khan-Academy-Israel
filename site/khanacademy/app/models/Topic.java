@@ -18,7 +18,7 @@ public class Topic extends Model {
 	
 	public int order;
 	
-	@OneToMany(cascade={CascadeType.ALL}, mappedBy="topic")
+	@OneToMany(cascade={CascadeType.ALL}, mappedBy="topic", fetch = FetchType.EAGER)
 	public List<Lesson> lessons;
 	
 	public static List<Topic> sort(List<Topic> topics) {
