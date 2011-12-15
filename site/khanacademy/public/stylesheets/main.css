@@ -303,6 +303,22 @@ h2 {
 	color: red;
 }
 
+/* ================== Video page ====================== */
+
+.video {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.video_description {
+	color: #555;
+}
+
+.video_title {
+	font-size: 1.25em;
+}
+
 /* ================== Contribution page ====================== */
 .contib_content {
 	width: 400px;

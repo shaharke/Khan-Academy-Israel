@@ -74,3 +74,7 @@
 	background: -moz-linear-gradient(top, #6E9E0C, #BDD28F);
 	/* for firefox 3.6+ */
 }
+
+.container {
+	overflow: hidden;
+}

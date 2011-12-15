@@ -12,7 +12,7 @@ $(document).ready(function() {
 		<p>${topic.description}</p>
 		<div class="lessons">
 		#{list items:topic.lessons, as:'lesson'}
-			<div><a href="${lesson.url}" class="lesson_link">${lesson.hebrewName}</a></div>
+			<div><a href="@{Video.show(lesson.id)}" class="lesson_link">${lesson.hebrewName}</a></div>
 		#{/list}
 		</div>
 		<div style="clear: both"></div>
