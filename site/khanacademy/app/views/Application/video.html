@@ -1,0 +1,9 @@
+#{extends 'main.html' /}
+<article class="video container">
+	<h1>
+		<span class="video_title">${lesson.hebrewName}</span><span class="video_description">: ${lesson.description}</span>
+	</h1>
+	
+		<iframe class="youtube-player" type="text/html" width="800" height="385"
+			src="http://www.youtube.com/embed/${videoId}" frameborder="0"> </iframe>
+</article>
