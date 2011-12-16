@@ -39,7 +39,8 @@ public class Admin extends Controller {
 		lesson.serialNumber = serialNumber;
 		lesson.description = description;
 		try {
-			lesson.url = new URL(url);
+			new URL(url);
+			lesson.url = url;
 		} catch (MalformedURLException e) {
 			validation.addError("url", "addLesson.url.malformed",
 					e.getMessage());
@@ -48,7 +49,6 @@ public class Admin extends Controller {
 			form();
 		}
 		lesson.topic = Topic.findById(topicId);
-		;
 		lesson.save();
 		params.flash();
 		form();

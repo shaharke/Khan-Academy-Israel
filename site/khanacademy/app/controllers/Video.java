@@ -17,7 +17,7 @@ public class Video extends Controller {
     }
 
 	private static String extractMovieId(Lesson lesson) {
-		Matcher matcher = MOVIE_ID_EXTRACTOR.matcher(lesson.url.getQuery());
+		Matcher matcher = MOVIE_ID_EXTRACTOR.matcher(lesson.url);
 		if (matcher.find()) {
 			return matcher.group(1);
 		}

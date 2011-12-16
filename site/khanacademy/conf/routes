@@ -34,8 +34,13 @@ GET		/lesson/{id}							Video.show
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public
 
+# Import Secure routes
+*       /                                    	module:secure
+
+# Import CRUD routes
+*      /crud		             				module:crud
+
+
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
 
-# Import Secure routes
-*       /                                    	module:secure

@@ -1,6 +1,8 @@
 package models;
 
 import play.*;
+import play.data.validation.MaxSize;
+import play.data.validation.Required;
 import play.db.jpa.*;
 
 import javax.persistence.*;
@@ -10,12 +12,15 @@ import java.util.*;
 @Entity(name = "topic")
 public class Topic extends Model {
 	
+	@Required
 	public String name;
 	
+	@MaxSize(1000)
 	public String description;
 	
 	public String englishName;
 	
+	@Required
 	public int order;
 	
 	@OneToMany(cascade={CascadeType.ALL}, mappedBy="topic", fetch = FetchType.EAGER)
@@ -30,6 +35,11 @@ public class Topic extends Model {
 			}
 		});
 		return topics;
+	}
+	
+	@Override
+	public String toString() {
+		return name;
 	}
     
 }

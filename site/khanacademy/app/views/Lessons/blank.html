@@ -1,0 +1,27 @@
+#{extends 'CRUD/layout.html' /}
+
+#{script 'jquery-1.6.2.min.js' /}
+<script type="text/javascript">
+	function clearForm() {
+		$('.clearme').val("")
+	}
+</script>
+
+
+<div id="crudBlank" class="${type.name}">
+	
+	<h2 id="crudBlankTitle">&{'crud.blank.title', type.modelName}</h2>
+	
+	<div class="objectForm">
+	#{form action:@create(), enctype:'multipart/form-data'}
+		#{crud.form /}
+		<p class="crudButtons">
+			<input type="submit" name="_save" value="&{'crud.save', type.modelName}" />
+			<input type="submit" name="_saveAndContinue" value="&{'crud.saveAndContinue', type.modelName}" />
+			<input type="submit" name="_saveAndAddAnother" value="&{'crud.saveAndAddAnother', type.modelName}" />
+			<input type="button" value="&{'crud.clear'}" class="submit_feedback_button" onclick="clearForm()" />
+		</p>
+	#{/form}
+	</div>
+
+</div>
