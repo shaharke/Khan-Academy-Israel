@@ -39,7 +39,7 @@
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
 
-	<div class="outer_wrapper"></div>
+	<div class="outer_wrapper">
 	<div class="page_container">
 		<div class="header_container">
 			<div class="logo_container">
@@ -60,6 +60,13 @@
 					</div>
 				</div>
 				 -->
+				<div style="padding-bottom: 30px">
+					#{secure.login/}
+					#{secure.check 'admin'}
+					<span class="separator"></span>
+					<a href=@{Admin.index()} class="login_link">תפעול</a>
+					#{/secure.check}
+				</div>
 				#{navigation style:'header_links' /}
 				</div>
 			</div>
@@ -69,10 +76,10 @@
 		<div class="clear_both"></div>
 	</div>
 	<div class="mw_footer">
-		<div class="footer_container">
+		<div class="footer container">
 		#{navigation style:'footer_links' /}
 		</div>
-
+	</div>
 	</div>
 </body>
 </html>

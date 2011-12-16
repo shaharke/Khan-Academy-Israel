@@ -12,6 +12,10 @@ import play.mvc.With;
 
 @With(Secure.class)
 public class Admin extends Controller {
+	
+	public static void index() {
+		render();
+	}
 
 	public static void form() {
 		List<Topic> topics = Topic.findAll();

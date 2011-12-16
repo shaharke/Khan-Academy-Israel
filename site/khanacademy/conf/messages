@@ -8,4 +8,9 @@ addLesson.url.required=יש לציין את כתובת היוטיוב של הש�
 addLesson.url.malformed=הכתובת שהוזנה אינה חוקית: %2$s
 addLesson.serial.required=יש לציין את המספר הסידורי של השיעור
 
+login.link=התחברות
+logout.link=התנתקות
+
 crud.clear=Clear Form
+
+
