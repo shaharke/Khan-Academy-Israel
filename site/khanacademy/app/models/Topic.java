@@ -21,6 +21,7 @@ public class Topic extends Model {
 	public String englishName;
 	
 	@Required
+	@Column(name = "sort")
 	public int order;
 	
 	@OneToMany(cascade={CascadeType.ALL}, mappedBy="topic", fetch = FetchType.EAGER)
