@@ -10,7 +10,7 @@ import play.data.validation.Required;
 import play.mvc.Controller;
 import play.mvc.With;
 
-@With(Secure.class)
+@With(AdminSecured.class)
 public class Admin extends Controller {
 	
 	public static void index() {

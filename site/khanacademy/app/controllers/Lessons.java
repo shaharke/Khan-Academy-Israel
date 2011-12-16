@@ -12,8 +12,7 @@ import play.exceptions.TemplateNotFoundException;
 import play.i18n.Messages;
 import play.mvc.*;
 
-@With(Secure.class)
-public class Lessons extends CRUD {
+public class Lessons extends SecuredCRUD {
 	
 	public static void blank() throws Exception {
         ObjectType type = ObjectType.get(getControllerClass());

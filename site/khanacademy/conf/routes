@@ -38,7 +38,8 @@ GET     /public/                                staticDir:public
 *       /                                    	module:secure
 
 # Import CRUD routes
-*      /crud		             				module:crud
+*      /crud/index	             				SecuredCRUD.index
+*      /crud		             				SecuredCRUD.index
 
 
 # Catch all
