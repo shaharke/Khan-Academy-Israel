@@ -38,13 +38,13 @@ a:visited {
 a:active {
 	border: none;
 	outline: none;
-	ie-dummy: expression(this.hideFocus =                     true);
+	ie-dummy: expression(this.hideFocus =                       true);
 }
 
 a:focus {
 	border: none;
 	outline: none;
-	ie-dummy: expression(this.hideFocus =                     true);
+	ie-dummy: expression(this.hideFocus =                       true);
 }
 
 p {
@@ -107,7 +107,6 @@ h2 {
 	color: #383937;
 	font-family: Gisha;
 }
-
 
 .mv_standard {
 	border-bottom: #c9e1f4 1px solid;
@@ -232,6 +231,18 @@ span.separator {
 .main {
 	text-align: right;
 	padding: 15px 10px 25px 10px;
+}
+
+.sponsor_logos {
+	padding-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	overflow: hidden
+}
+
+.sponsor_logos span {
+	font-weight: bold;
 }
 
 .news_item.wrapper {
