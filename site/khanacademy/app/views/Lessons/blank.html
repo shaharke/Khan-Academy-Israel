@@ -1,6 +1,7 @@
 #{extends 'CRUD/layout.html' /}
-
 #{script 'jquery-1.6.2.min.js' /}
+#{script 'lessonCrud.js' /}
+
 <script type="text/javascript">
 	function clearForm() {
 		$('.clearme').val("")
@@ -14,7 +15,28 @@
 	
 	<div class="objectForm">
 	#{form action:@create(), enctype:'multipart/form-data'}
-		#{crud.form /}
+		#{crud.form }
+			#{crud.custom 'url'}
+				#{field 'object.url'}
+					<label for="${field.id}">URL</label>
+					<input id="${field.id}" class="${field.errorClass} url_input" type="text" name="${field.name}" value="${object.url?.escape()?.raw() ?: field.error?.message == 'validation.required' ? '' : _value?.escape()?.raw()}" size="50" ${object.linkless ? 'disabled="disabled"'.raw() : '' } />
+ 					#{ifError field.name}
+     				<span class="error">${field.error.raw()}</span>
+ 					#{/ifError}
+				#{/field}
+  			#{/crud.custom}
+
+	  		#{crud.custom 'linkless'}
+  				#{field 'object.linkless'}
+ 					<label for="${field.id}">No link yet?</label>
+	    			<input id="${field.id}" class="${field.errorClass}" type="checkbox" name="${field.name}" value="true" ${(object.linkless ? 'true' : _value) ? 'checked="true"'.raw() : ''} onchange="switchUrlFieldState(checked)"/>
+ 					<input type="hidden" name="${field.name}" value="false" />
+ 					#{ifError field.name}
+     				<span class="error">${field.error.raw()}</span>
+ 					#{/ifError}
+				#{/field}
+			#{/crud.custom}
+		#{/crud.form}
 		<p class="crudButtons">
 			<input type="submit" name="_save" value="&{'crud.save', type.modelName}" />
 			<input type="submit" name="_saveAndContinue" value="&{'crud.saveAndContinue', type.modelName}" />

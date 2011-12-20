@@ -13,4 +13,7 @@ logout.link=התנתקות
 
 crud.clear=Clear Form
 
+lesson.url.required=URL is a mandatory field when lesson is not without link
+lesson.url.notvalid=Invalid URL
+
 
