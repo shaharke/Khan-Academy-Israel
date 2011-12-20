@@ -241,8 +241,9 @@ span.separator {
 	overflow: hidden
 }
 
-.sponsor_logos span {
+.logos_text {
 	font-weight: bold;
+	text-align: center;
 }
 
 .news_item.wrapper {
