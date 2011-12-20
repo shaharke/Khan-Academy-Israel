@@ -14,8 +14,6 @@ import play.data.validation.MaxSize;
 import play.data.validation.Required;
 import play.data.validation.Validation;
 import play.db.jpa.Model;
-import play.modules.search.Field;
-import play.modules.search.Indexed;
 
 @Entity(name = "lesson")
 public class Lesson extends Model {
