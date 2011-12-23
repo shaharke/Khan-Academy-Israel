@@ -85,10 +85,20 @@
 	<div style="border-bottom: 2px solid; border-bottom-color: #E8EDD8; padding-top: 20px"></div>
 	<div style="padding-top: 20px">
 		<span>להלן תרשים המתאר את הסדר והתלות בין הנושאים, המתורגמים בשלב זה, מתוך האוסף הכולל. השרטוט יעודכן כל פעם שנושאים חדשים יצורפו לאתר.</span>
-		<div style="padding-bottom: 10px"><img src="@{'public/images/topic-map.png'}" style="padding-top: 10px"/></div>
+		<div style="padding-bottom: 10px">
+			<img src="@{'public/images/topic-map.png'}" style="padding-top: 10px" usemap="topicmap"/>
+			<map name="topicmap">
+				<area alt="calculus" shape="rect" coords="11,7, 112,32" href="#Calculus">
+				<area alt="pre-calculus" shape="rect" coords="152,7, 253,32" href="#Pre-Calculus">
+				<area alt="algera" shape="rect" coords="292,7, 393,32" href="#Algebra">
+				<area alt="pre-algera" shape="rect" coords="431,7, 533,32" href="#Pre-Algebra">
+				<area alt="arithmetics" shape="rect" coords="570,7, 672,32" href="#Arithmetics">
+			</map>
+		</div>
 		<span>קישור לשיעורים עצמם ניתן למצוא בקטלוג שלהלן:</span>
 	</div>
 	<div style="border-bottom: 1px solid; border-bottom-color: #E8EDD8; padding-top: 20px"></div>
+	<a name="catalog" id="catalog"></a>
 	<div id="catalog_container">
 	</div>
 	
