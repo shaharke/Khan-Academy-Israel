@@ -8,14 +8,11 @@ $(document).ready(function() {
 <div class="catalog" style="display: none;">
 	#{list items:topics, as: 'topic'}
 	<div style="padding-top: 20px">
-		<h2 class="topic">${topic.name}</h2>
+		<h2 class="topic">${topic.name}</h2><a name="${topic.englishName}" id="${topic.englishName}"></a>
 		<p>${topic.description}</p>
 		<div class="lessons">
 		#{list items:topic.lessons, as:'lesson'}
 			<div><a href="${lesson.url}" class="lesson_link">${lesson.hebrewName}</a></div>
-			<!-- 
-				<div><a href="@{Video.show(lesson.id)}" class="lesson_link">${lesson.hebrewName}</a></div>
-			 -->
 		#{/list}
 		</div>
 		<div style="clear: both"></div>
