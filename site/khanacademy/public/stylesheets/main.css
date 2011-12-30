@@ -327,6 +327,10 @@ span.separator {
 	margin-top: 5px;
 }
 
+.participants{
+	padding-top: 10px;
+}
+
 /* Footer ================================================================================ */
 .mw_footer {
 	background-color: #A2BD33;
