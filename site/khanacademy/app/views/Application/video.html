@@ -3,7 +3,11 @@
 	<h1>
 		<span class="video_title">${lesson.hebrewName}</span><span class="video_description">: ${lesson.description}</span>
 	</h1>
-	
 		<iframe class="youtube-player" type="text/html" width="800" height="385"
 			src="http://www.youtube.com/embed/${videoId}" frameborder="0" cc_load_policy="1"> </iframe>
+		<div style="width: 800px">
+			<div class="fb-like" style="float: right" data-href="@@{Video.show()}/${lesson.id}" data-send="true" data-width="400" data-show-faces="false" data-action="recommend"></div>
+		</div>
+		<br>
+		<div class="fb-comments" data-href="@@{Video.show()}/${lesson.id}" data-num-posts="5" data-width="800"></div>
 </article>
