@@ -28,7 +28,12 @@ POST    /contact                                Contact.send
 GET		/catalog								Catalog.show
 
 # Movies
+GET		/lesson									Video.show
 GET		/lesson/{id}							Video.show
+
+# Search
+
+GET		/search									Index.find
 
 
 # Map static resources from the /app/public folder to the /public path
