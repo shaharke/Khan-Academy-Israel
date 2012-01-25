@@ -8,7 +8,7 @@ import play.mvc.Controller;
 
 public class Video extends Controller {
 	
-	private static final Pattern MOVIE_ID_EXTRACTOR = Pattern.compile("v=(\\w+)"); 
+	private static final Pattern MOVIE_ID_EXTRACTOR = Pattern.compile("v=(.+)"); 
 
     public static void show(Long id) {
     	Lesson lesson = Lesson.findById(id);
