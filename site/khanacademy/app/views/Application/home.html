@@ -9,9 +9,8 @@
   })();
   
   $(document).ready(function() {
-	  	//TODO: solve proxy issue 
-		//var showCatalog = #{jsAction @@Catalog.show() /}
-	  	$('#catalog_container').load("catalog");
+		var showCatalog = #{jsAction @@Catalog.show() /}
+	  	$('#catalog_container').load(showCatalog());
 	 });
 </script>
 <div>

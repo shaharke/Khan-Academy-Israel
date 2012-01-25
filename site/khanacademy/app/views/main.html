@@ -43,7 +43,7 @@
 			}
 			js = d.createElement(s);
 			js.id = id;
-			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=179711785445889";
+			js.src = "//connect.facebook.net/he_IL/all.js#xfbml=1&appId=179711785445889";
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
@@ -73,7 +73,7 @@
 					#{secure.login/}
 					#{secure.check 'admin'}
 					<span class="separator"></span>
-					<a href=@{Admin.index()} class="login_link">תפעול</a>
+					<a href="@{Admin.index()}" class="login_link">תפעול</a>
 					#{/secure.check}
 				</div>
 				#{navigation style:'header_links' /}
