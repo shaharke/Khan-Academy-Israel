@@ -279,6 +279,11 @@ span.separator {
 	padding-top: 20px;
 }
 
+.no_lessons{
+	font-style: italic;
+	padding-top: 10px;
+}
+
 /* ================== Contact page ====================== */
 .feedback_form {
 	width: 400px;

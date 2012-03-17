@@ -1,25 +1,45 @@
 #{script 'autocolumn.min.js' /}
 <script type="text/javascript">
-$(document).ready(function() {
-	$('.catalog').fadeIn(2000);
-	$('.lessons').columnize({columns:3, width:300, 'float':'right', lastNeverTallest : false});
-});
+	$(document).ready(function() {
+		$('.catalog').fadeIn(2000);
+		$('.lessons').columnize({
+			columns : 3,
+			width : 300,
+			'float' : 'right',
+			lastNeverTallest : false
+		});
+	});
 </script>
 <div class="catalog" style="display: none;">
 	#{list items:topics, as: 'topic'}
 	<div style="padding-top: 20px">
-		<h2 class="topic">${topic.name}</h2><a name="${topic.englishName}" id="${topic.englishName}"></a>
+		<h2 class="topic">${topic.name}</h2>
+		<a name="${topic.englishName}" id="${topic.englishName}"></a>
 		<p>${topic.description}</p>
+		#{if topic.lessons}
 		<div class="lessons">
-		#{list items:topic.lessons, as:'lesson'}
-			#{if lesson.linkless == false }
-				<div><a href="@{Video.show()}/${lesson.id}" class="lesson_link">${lesson.hebrewName}</a></div>
-			#{/if}
-			#{else}
-				<div><span>${lesson.hebrewName}</span></div>
-			#{/else}
-		#{/list}
+			#{list items:topic.lessons, as:'lesson'} 
+				#{if lesson.linkless == false }
+				<div>
+					<a href="@{Video.show()}/${lesson.id}" class="lesson_link">${lesson.hebrewName}</a>
+				</div>
+				#{/if} #{else}
+				<div>
+					<span>${lesson.hebrewName}</span>
+				</div>
+				#{/else} 
+			#{/list} 
 		</div>
+		#{/if}
+		#{ifnot topic.lessons}
+			<div class="no_lessons">
+				סרטונים בנושא זה עדיין אינם זמינים. הירשמו לדף
+				<a href="http://www.facebook.com/pages/%D7%90%D7%A7%D7%93%D7%9E%D7%99%D7%99%D7%AA-%D7%A7%D7%94%D7%90%D7%9F-%D7%91%D7%99%D7%A9%D7%A8%D7%90%D7%9C/246613442054523">הפייסבוק</a>
+				או 
+				<a href="https://plus.google.com/116402714082802317239">הגוגל+</a> 
+				בשביל לקבל עדכונים.
+			</div>
+		#{/ifnot}
 		<div style="clear: both"></div>
 	</div>
 	#{/list}
