@@ -4,8 +4,6 @@ import play.*;
 import play.data.validation.MaxSize;
 import play.data.validation.Required;
 import play.db.jpa.*;
-import play.modules.search.Field;
-import play.modules.search.Indexed;
 
 import javax.persistence.*;
 
