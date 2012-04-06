@@ -3,6 +3,7 @@ package controllers;
 import java.util.List;
 
 import models.Lesson;
+import models.SubTopic;
 import models.Topic;
 import play.mvc.Controller;
 
@@ -17,7 +18,11 @@ public class Catalog extends Controller {
 	private static void sort(List<Topic> topics) {
 		Topic.sort(topics);
 		for (Topic t : topics) {
-			Lesson.sort(t.lessons);
+			List<SubTopic> subtopics = t.subtopics;
+			SubTopic.sort(subtopics);
+			for (SubTopic st : subtopics) {
+				Lesson.sort(st.lessons);
+			}
 		}
 	}
     

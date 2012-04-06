@@ -4,6 +4,8 @@ import play.*;
 import play.data.validation.MaxSize;
 import play.data.validation.Required;
 import play.db.jpa.*;
+import play.modules.search.Field;
+import play.modules.search.Indexed;
 
 import javax.persistence.*;
 
@@ -23,9 +25,9 @@ public class Topic extends Model {
 	@Required
 	@Column(name = "sort")
 	public int order;
-	
+
 	@OneToMany(cascade={CascadeType.ALL}, mappedBy="topic", fetch = FetchType.EAGER)
-	public List<Lesson> lessons;
+	public List<SubTopic> subtopics;
 	
 	public static List<Topic> sort(List<Topic> topics) {
 		Collections.sort(topics, new Comparator<Topic>() {

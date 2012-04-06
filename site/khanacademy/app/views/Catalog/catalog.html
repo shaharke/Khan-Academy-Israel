@@ -16,9 +16,12 @@
 		<h2 class="topic">${topic.name}</h2>
 		<a name="${topic.englishName}" id="${topic.englishName}"></a>
 		<p>${topic.description}</p>
-		#{if topic.lessons}
-		<div class="lessons">
-			#{list items:topic.lessons, as:'lesson'} 
+		#{if topic.subtopics}
+		<div class="subtopics">
+			#{list items:topic.subtopics, as:'subtopic'}
+			<h3 class="subtopic">${subtopic.name}</h3> 
+			<div class="lessons">
+			#{list items:subtopic.lessons, as:'lesson'} 
 				#{if lesson.linkless == false }
 				<div>
 					<a href="@{Video.show()}/${lesson.id}" class="lesson_link">${lesson.hebrewName}</a>
@@ -29,9 +32,11 @@
 				</div>
 				#{/else} 
 			#{/list} 
+		</div>	
+			#{/list}
 		</div>
 		#{/if}
-		#{ifnot topic.lessons}
+		#{ifnot topic.subtopics}
 			<div class="no_lessons">
 				סרטונים בנושא זה עדיין אינם זמינים. הירשמו לדף
 				<a href="http://www.facebook.com/pages/%D7%90%D7%A7%D7%93%D7%9E%D7%99%D7%99%D7%AA-%D7%A7%D7%94%D7%90%D7%9F-%D7%91%D7%99%D7%A9%D7%A8%D7%90%D7%9C/246613442054523">הפייסבוק</a>

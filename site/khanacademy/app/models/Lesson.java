@@ -36,8 +36,8 @@ public class Lesson extends Model {
 	
 	@Required
 	@ManyToOne
-	@JoinColumn(name = "topic_id", nullable = false)
-	public Topic topic;
+	@JoinColumn(name = "subtopic_id", nullable = false)
+	public SubTopic topic;
 
 	public static List<Lesson> sort(List<Lesson> lessons) {
 		Collections.sort(lessons, new Comparator<Lesson>() {
