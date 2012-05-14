@@ -8,7 +8,7 @@ import play.mvc.Controller;
 
 public class Video extends Controller {
 	
-	private static final Pattern MOVIE_ID_EXTRACTOR = Pattern.compile("v=(.+)"); 
+	private static final Pattern[] patterns = new Pattern[] {Pattern.compile("v=(.+)"), Pattern.compile("youtu.be/(.+)")};
 
     public static void show(Long id) {
     	Lesson lesson = Lesson.findById(id);
@@ -17,11 +17,13 @@ public class Video extends Controller {
     }
 
 	private static String extractMovieId(Lesson lesson) {
-		Matcher matcher = MOVIE_ID_EXTRACTOR.matcher(lesson.url);
-		if (matcher.find()) {
-			return matcher.group(1);
+		for (Pattern pattern : patterns) {
+			Matcher matcher = pattern.matcher(lesson.url);
+			if (matcher.find()) {
+				return matcher.group(1);
+			}
 		}
 		return null;
 	}
-    
+	
 }
