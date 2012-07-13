@@ -59,7 +59,7 @@ s.parentNode.insertBefore(po, s);
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
 
-	<div class="outer_wrapper">
+	<div class="outer_wrapper"></div>
 	<div class="page_container">
 		<div class="header_container">
 			<div class="logo_container">
@@ -69,17 +69,6 @@ s.parentNode.insertBefore(po, s);
 			</div>
 			<div class="menu_container">
 				<div class="menu">
-				<!-- 
-				<div id="sharingServices" style="float: right;">
-					<div style="padding-left: 3px">
-						<g:plusone size="medium" href="http://hebrewkhan.org/"></g:plusone>
-						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://hebrewkhan.org/"
-							data-count="horizontal">Tweet</a>
-						<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-						<div class="fb-like" data-href="http://hebrewkhan.org/" data-send="true" data-layout="button_count" data-width="50" data-show-faces="false"></div>
-					</div>
-				</div>
-				 -->
 				<div style="padding-bottom: 30px">
 					#{secure.login/}
 					#{secure.check 'admin'}
@@ -92,14 +81,13 @@ s.parentNode.insertBefore(po, s);
 			</div>
 			<div class="clear_both"></div>
 		</div>
-			<div class="main container">#{doLayout /}</div>
+		<div class="main container">#{doLayout /}</div>
 		<div class="clear_both"></div>
 	</div>
 	<div class="mw_footer">
-		<div class="footer container">
-		#{navigation style:'footer_links' /}
+		<div class="footer">
+			#{navigation style:'footer_links' /}
 		</div>
-	</div>
 	</div>
 </body>
 </html>

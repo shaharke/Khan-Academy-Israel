@@ -7,11 +7,9 @@ GET     /                                      	Application.home
 GET     /about                                  Application.home
 GET     /about_ajax                             Application.about
 
-# News page
-GET     /news                                   Application.news
+# Lesson catalog page
 
-# News page
-GET     /forum                                  Application.forum
+GET		/catalog								Catalog.show
 
 # Administration
 
@@ -23,9 +21,6 @@ GET     /contribute                             Application.contribute
 # Contact page
 GET     /contact		                        Contact.form
 POST    /contact                                Contact.send
-
-# Catalog
-GET		/catalog								Catalog.show
 
 # Movies
 GET		/lesson									Video.show

@@ -8,10 +8,6 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
   })();
   
-  $(document).ready(function() {
-		var showCatalog = #{jsAction @@Catalog.show() /}
-	  	$('#catalog_container').load(showCatalog());
-	 });
 </script>
 <div>
 	<div class="float" style="padding-left: 15px; width: 435px;">
@@ -79,9 +75,4 @@
 	</div>
 	<div class="float" style="padding-right: 10px"></div>
 	<div class="clear_both"></div>
-	<br>
-	<div style="border-bottom: 2px solid; border-bottom-color: #E8EDD8; padding-top: 20px"></div>
-	<a name="catalog" id="catalog"></a>
-	<div id="catalog_container"></div>
-
 </div>
