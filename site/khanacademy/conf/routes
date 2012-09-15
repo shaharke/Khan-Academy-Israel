@@ -10,6 +10,7 @@ GET     /about_ajax                             Application.about
 # Lesson catalog page
 
 GET		/catalog								Catalog.show
+GET		/catalog/index							Catalog.index
 
 # Administration
 

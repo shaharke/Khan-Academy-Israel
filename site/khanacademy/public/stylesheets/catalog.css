@@ -1,0 +1,19 @@
+.catalog {
+	color: #333;
+	font-family: Gisha;
+	text-align: right;
+	direction: rtl;
+}
+
+.description {
+	font-size: 13px;
+}
+
+.lessons {
+	padding-top: 20px;
+}
+
+.no_lessons{
+	font-style: italic;
+	padding-top: 10px;
+}
