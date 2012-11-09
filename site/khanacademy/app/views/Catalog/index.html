@@ -5,7 +5,7 @@
 #{script 'autocolumn.min.js' /}
 #{script 'catalog.js' /}
 
-<div class="catalog"">
+<div class="catalog">
 	#{list items:topics, as: 'topic'}
 	<div style="padding-top: 20px">
 		<h2 class="topic">${topic.name}</h2>
@@ -36,7 +36,6 @@
 					סרטונים בנושא זה עדיין אינם זמינים. הירשמו לדף <a
 						href="http://www.facebook.com/pages/%D7%90%D7%A7%D7%93%D7%9E%D7%99%D7%99%D7%AA-%D7%A7%D7%94%D7%90%D7%9F-%D7%91%D7%99%D7%A9%D7%A8%D7%90%D7%9C/246613442054523">הפייסבוק</a>
 					או <a href="https://plus.google.com/116402714082802317239">הגוגל+</a> בשביל לקבל עדכונים.
-				</div>
 			#{/else}
 			</div>
 		#{/list}
@@ -47,7 +46,6 @@
 			סרטונים בנושא זה עדיין אינם זמינים. הירשמו לדף <a
 				href="http://www.facebook.com/pages/%D7%90%D7%A7%D7%93%D7%9E%D7%99%D7%99%D7%AA-%D7%A7%D7%94%D7%90%D7%9F-%D7%91%D7%99%D7%A9%D7%A8%D7%90%D7%9C/246613442054523">הפייסבוק</a>
 			או <a href="https://plus.google.com/116402714082802317239">הגוגל+</a> בשביל לקבל עדכונים.
-		</div>
 		#{/ifnot}
 		<div style="clear: both"></div>
 		#{/list}
