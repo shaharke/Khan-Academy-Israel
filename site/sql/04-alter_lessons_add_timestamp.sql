@@ -1,0 +1,1 @@
+ALTER TABLE `khan`.`lesson` CHANGE COLUMN `lastUpdated` `lastUpdated` TIMESTAMP NOT NULL  ;
